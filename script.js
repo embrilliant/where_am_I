@@ -2,21 +2,17 @@ $(function() {
 
 	var $result = $("#where");
 
-	$("button").on("click", getLocation);
+	$("#goto").on("click", getLocation);
 
 	function getLocation() {
 	    if (navigator.geolocation) {
-	        navigator.geolocation.getCurrentPosition(showPosition, fail);
+	        navigator.geolocation.getCurrentPosition(goTo, fail);
 	    } else { 
 	        $result.text("Geolocation is not supported by this browser.");
 	    }
 	}
 
 	function showPosition(position) {
-
-		// var script = document.createElement('script');
-  // script.src = 'http://maps.googleapis.com/maps/api/js?sensor=true';
-  // document.body.appendChild(script);
 
 		var latitude = position.coords.latitude;
 		var longitude = position.coords.longitude;
@@ -30,6 +26,7 @@ $(function() {
 		    zoom: 18,
 		    center: coords,
 		    mapTypeControl: true,
+		    draggable: true,
 		    navigationControlOptions: {
 		    	style: google.maps.NavigationControlStyle.SMALL
 		    },
@@ -52,4 +49,12 @@ $(function() {
 		console.log("fail");
 	}
 
+	// $("#goto").on("click", goTo);
+
+		function goTo(position) {
+			var latitude = position.coords.latitude;
+			var longitude = position.coords.longitude;
+			var url = "http://maps.google.com/maps?q=loc:"+latitude+","+longitude;
+			window.location.href = url; //http://maps.google.com/maps?q=loc: latitude , longitude
+		};
 });
