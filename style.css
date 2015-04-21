@@ -1,0 +1,15 @@
+
+#text {
+	display: none;
+}
+
+#map {
+	height: 400px;
+	width: 700px;
+}
+
+#map-canvas {
+	height: 70%;
+	width: 70%;
+	background-color: pink;
+}

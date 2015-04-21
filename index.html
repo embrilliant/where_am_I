@@ -1,0 +1,39 @@
+<html>
+<head>
+	<title>Where am I</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+  	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  	<script src="https://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="script.js"></script>
+	<!-- <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true"></script> -->
+	<script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1ZkKTRKK1qxd2DGjwG6Czcgjko8FEbHI">
+    </script>
+    
+	
+
+</head>
+<body>
+
+	<h1>Where am I?</h1>
+
+	<button>Click</button>
+	<div id="text">
+		<p>You are at</p>
+		<p id="where">
+			latitude: <span id="latitude"></span><br>
+			longitude: <span id="longitude"></span>
+		</p>
+	</div>
+	<div id="map-canvas"></div>
+	<!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1ZkKTRKK1qxd2DGjwG6Czcgjko8FEbHI"></script> -->
+	<div id="map">
+	</div>
+
+</body>
+</html>
