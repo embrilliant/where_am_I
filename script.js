@@ -13,7 +13,7 @@ $(function() {
 	}
 	
 	function fail() {
-		$("body").append("<p>Fail.</p>");
+		$("#container").append("<p>Failed to get a location.</p>");
 		console.log("fail");
 	}
 
